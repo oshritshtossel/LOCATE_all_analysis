@@ -7,6 +7,10 @@ LOCATE's accuracy in predicting the metabolome is higher than all current predic
 
 LOCATE’s latent representation predicts the host condition better than either microbiome or the metabolome. This representation is strongly correlated with host demographics. A significant improvement in accuracy (0.793 vs. 0.724 average accuracy) is obtained even with a small number of metabolite samples ($\sim 50$).
 
+![A schematic figure of LOCATE’s training](https://github.com/oshritshtossel/LOCATE_all_analysis/blob/master/img/mid_schematic.png)
+
+https://github.com/oshritshtossel/LOCATE_all_analysis/blob/master/img/mid_schematic.png
+
 ## How to apply LOCATE
 
 LOCATE's code is available at a separate [GitHub](https://github.com/oshritshtossel/LOCATE/) as well as a [PyPi](https://pypi.org/project/LOCATE-model/).
@@ -17,37 +21,37 @@ All the models' codes are available in the **Models** directory.
 
 ### INTEGRATED-LEARNER
 
-1. "integrated_learner_preprocess.py" - Apply all the preprocessing needed to the microbiome datasets as well as the metabolites datasets according to the [Integrated-Learner paper](https://doi.org/10.1101/2022.11.06.514786).
+1. **"integrated_learner_preprocess.py"** - Apply all the preprocessing needed to the microbiome datasets as well as the metabolites datasets according to the [Integrated-Learner paper](https://doi.org/10.1101/2022.11.06.514786).
 2. The implementation of the model (in R) over the datasets tested in the manuscript is available in [Google Colab](https://colab.research.google.com/drive/1MFsncDnYAux05xdIuhNDxpZMSQGPRR9X).
 
 ### MELONNPAN
-1. "melonnpan_condition.py" - Adjust the condition (phenotype) of each dataset to the prediction task.
-2. "melonnpan_preprocess.py" - Apply all the preprocessing needed to the microbiome datasets as well as the metabolites datasets according to the [MelonnPan paper](https://doi.org/10.1038/s41467-019-10927-1).
+1. **"melonnpan_condition.py"** - Adjust the condition (phenotype) of each dataset to the prediction task.
+2. **"melonnpan_preprocess.py"** - Apply all the preprocessing needed to the microbiome datasets as well as the metabolites datasets according to the [MelonnPan paper](https://doi.org/10.1038/s41467-019-10927-1).
 3. The implementation of the model in R is available on [MelonnPan site](https://huttenhower.sph.harvard.edu/melonnpan).
 
 ### MIMENET
-1. "mimenet_src" - Directory contains different models' architectures for MiMeNet as described in the [MiMeNet paper](https://doi.org/10.1371/journal.pcbi.1009021).
-2. "mimenet_condition.py" - Adjust the condition (phenotype) of each dataset to the prediction task.
-3. "mimenet_preprocess.py" - Apply all the preprocessing needed to the microbiome datasets as well as the metabolites datasets according to the [MiMeNet paper](https://doi.org/10.1371/journal.pcbi.1009021).
-4. "mimenet_runner.py" - Run the MiMeNet model on each of the tested datasets in the manuscript according to the [MiMeNet paper](https://doi.org/10.1371/journal.pcbi.1009021) protocol.
+1. **"mimenet_src"** - Directory contains different models' architectures for MiMeNet as described in the [MiMeNet paper](https://doi.org/10.1371/journal.pcbi.1009021).
+2. **"mimenet_condition.py"** - Adjust the condition (phenotype) of each dataset to the prediction task.
+3. **"mimenet_preprocess.py"** - Apply all the preprocessing needed to the microbiome datasets as well as the metabolites datasets according to the [MiMeNet paper](https://doi.org/10.1371/journal.pcbi.1009021).
+4. **"mimenet_runner.py"** - Run the MiMeNet model on each of the tested datasets in the manuscript according to the [MiMeNet paper](https://doi.org/10.1371/journal.pcbi.1009021) protocol.
 
 ### MNODE
-1. "mnode_preprocess.py" - Apply all the preprocessing needed to the microbiome datasets as well as the metabolites datasets according to the [mNODE paper](https://doi.org/10.1038/s42256-023-00627-3).
+1. **"mnode_preprocess.py"** - Apply all the preprocessing needed to the microbiome datasets as well as the metabolites datasets according to the [mNODE paper](https://doi.org/10.1038/s42256-023-00627-3).
 2. The implementation of the model in Julia is available in [mNODE GitHub](https://github.com/wt1005203/mNODE).
 
 ### MULTIVIEW
-1. multi_view_preprocess.py" - Apply all the preprocessing needed to the microbiome datasets as well as the metabolites datasets according to the [Multiview paper](https://doi.org/10.1073/pnas.2202113119).
+1. **"multi_view_preprocess.py"** - Apply all the preprocessing needed to the microbiome datasets as well as the metabolites datasets according to the [Multiview paper](https://doi.org/10.1073/pnas.2202113119).
 2. The implementation of the model (in R) over the datasets tested in the manuscript is available in [Google Colab](https://colab.research.google.com/drive/1MFsncDnYAux05xdIuhNDxpZMSQGPRR9X).
 
 ### SPARSENED
-1. "sparse_ned_L0_regularization" - Directory contains different models' architectures and layers implementations as described in the [Sparse-NED paper](https://doi.org/10.1186/s12864-020-6652-7).
-2. "sparse_ned_snip" - Directory contains useful utils for the Sparse-NED models.
-3. "sparse_ned_biome_ae.py" - Dataloader, training, loss functions as described in [Sparse-NED GitHub](https://github.com/vuongle2/BiomeNED)
-4. "sparse_ned_condition.py" - Adjust the condition (phenotype) of each dataset to the prediction task.
-5. "sparse_ned_models.py" - Forward and backward implementations and some architectures as further described in [Sparse-NED GitHub](https://github.com/vuongle2/BiomeNED).
-6. "sparse_ned_preprocess.py" - Apply all the preprocessing needed to the microbiome datasets as well as the metabolites datasets according to the [Sparse-NED paper](https://doi.org/10.1186/s12864-020-6652-7).
-7. "sparse_ned_runner.py" -  Run the Sparse-NED model on each of the tested datasets in the manuscript according to the [Sparse-NED paper](https://doi.org/10.1186/s12864-020-6652-7) protocol.
-8. "sparse_ned_utils.py" - Necessary utils for the sparse_ned_runner code.
+1. **"sparse_ned_L0_regularization"** - Directory contains different models' architectures and layers implementations as described in the [Sparse-NED paper](https://doi.org/10.1186/s12864-020-6652-7).
+2. **"sparse_ned_snip"** - Directory contains useful utils for the Sparse-NED models.
+3. **"sparse_ned_biome_ae.py"** - Dataloader, training, loss functions as described in [Sparse-NED GitHub](https://github.com/vuongle2/BiomeNED)
+4. **"sparse_ned_condition.py"** - Adjust the condition (phenotype) of each dataset to the prediction task.
+5. **"sparse_ned_models.py"** - Forward and backward implementations and some architectures as further described in [Sparse-NED GitHub](https://github.com/vuongle2/BiomeNED).
+6. **"sparse_ned_preprocess.py"** - Apply all the preprocessing needed to the microbiome datasets as well as the metabolites datasets according to the [Sparse-NED paper](https://doi.org/10.1186/s12864-020-6652-7).
+7. **"sparse_ned_runner.py"** -  Run the Sparse-NED model on each of the tested datasets in the manuscript according to the [Sparse-NED paper](https://doi.org/10.1186/s12864-020-6652-7) protocol.
+8. **"sparse_ned_utils.py"** - Necessary utils for the sparse_ned_runner code.
 
 ## Statistical analysis, comparisons and visualizations
 The analyses are presented according to the figures in the manuscript.
