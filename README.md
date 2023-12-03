@@ -214,6 +214,14 @@ only, the red color represents an IntegratedLearner variant of stacked, and the 
 The standard errors between the 10 cross-validations are in black.
 
    * Apply a one-sided t-test was applied between the models. The stars follow the previous figures.
+  
+
+## Cite us 
+Shtossel, Oshrit, et al. "Microbiome-metabolome interactions predict host phenotype." (2022).
+
+## Contact us
+[Oshrit Shtossel](oshritvig@gmail.com)
+
 
 
 
